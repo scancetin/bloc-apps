@@ -4,6 +4,7 @@ class CustomText extends StatelessWidget {
   final double size;
   final String text;
   final Color color;
+
   const CustomText({
     super.key,
     this.size = 16,
