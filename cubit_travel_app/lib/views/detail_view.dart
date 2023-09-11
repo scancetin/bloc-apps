@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sized_box_for_whitespace
-
 import 'package:cubit_travel_app/cubit/app_cubits_cubit.dart';
 import 'package:cubit_travel_app/widgets/custom_large_text.dart';
 import 'package:cubit_travel_app/widgets/custom_text.dart';
@@ -15,7 +13,7 @@ class DetailView extends StatelessWidget {
       builder: (context, state) {
         DetailState details = state as DetailState;
         return Scaffold(
-          body: Container(
+          body: SizedBox(
             height: double.maxFinite,
             width: double.maxFinite,
             child: Stack(
@@ -24,13 +22,14 @@ class DetailView extends StatelessWidget {
                   child: Container(
                     width: double.maxFinite,
                     height: 350,
-                    decoration: BoxDecoration(color: Colors.purpleAccent),
+                    decoration: const BoxDecoration(color: Colors.purpleAccent),
                   ),
                 ),
                 Positioned(
                   top: 300,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 50),
                     width: MediaQuery.of(context).size.width,
                     height: 600,
                     decoration: BoxDecoration(
@@ -43,14 +42,14 @@ class DetailView extends StatelessWidget {
                         Row(
                           children: [
                             LargeCustomText(text: details.place.location),
-                            Spacer(),
+                            const Spacer(),
                             LargeCustomText(
                                 text: "\$ ${details.place.price}",
                                 color: Colors.deepPurpleAccent),
                           ],
                         ),
-                        SizedBox(height: 10),
-                        Row(
+                        const SizedBox(height: 10),
+                        const Row(
                           children: [
                             Icon(Icons.location_on_sharp,
                                 color: Colors.deepPurpleAccent),
@@ -60,34 +59,35 @@ class DetailView extends StatelessWidget {
                                 color: Colors.deepPurpleAccent),
                           ],
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Row(
                           children: [
                             Wrap(
                               children: List.generate(
                                 5,
                                 (index) => index < 4
-                                    ? Icon(Icons.star, color: Colors.orange)
-                                    : Icon(Icons.star_border,
+                                    ? const Icon(Icons.star,
+                                        color: Colors.orange)
+                                    : const Icon(Icons.star_border,
                                         color: Colors.black54),
                               ),
                             ),
-                            SizedBox(width: 5),
-                            CustomText(text: "(4.0)"),
+                            const SizedBox(width: 5),
+                            const CustomText(text: "(4.0)"),
                           ],
                         ),
-                        SizedBox(height: 30),
-                        LargeCustomText(text: "People", size: 20),
-                        SizedBox(height: 5),
-                        CustomText(
+                        const SizedBox(height: 30),
+                        const LargeCustomText(text: "People", size: 20),
+                        const SizedBox(height: 5),
+                        const CustomText(
                             text: "Number of people in your group", size: 15),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Wrap(
                           children: List.generate(
                             5,
                             (index) {
                               return Container(
-                                margin: EdgeInsets.only(right: 10),
+                                margin: const EdgeInsets.only(right: 10),
                                 height: 50,
                                 width: 50,
                                 decoration: BoxDecoration(
@@ -108,13 +108,13 @@ class DetailView extends StatelessWidget {
                             },
                           ),
                         ),
-                        SizedBox(height: 30),
-                        LargeCustomText(text: "Description", size: 20),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 30),
+                        const LargeCustomText(text: "Description", size: 20),
+                        const SizedBox(height: 5),
                         CustomText(
                           text: details.place.description,
                         ),
-                        SizedBox(height: 30),
+                        const SizedBox(height: 30),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -128,7 +128,7 @@ class DetailView extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: IconButton(
-                                icon: Icon(Icons.favorite_border),
+                                icon: const Icon(Icons.favorite_border),
                                 onPressed: () {},
                               ),
                             ),
@@ -140,7 +140,7 @@ class DetailView extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: IconButton(
-                                icon: Row(
+                                icon: const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
                                   children: [
@@ -168,7 +168,7 @@ class DetailView extends StatelessWidget {
                       IconButton(
                         onPressed: () =>
                             BlocProvider.of<AppCubits>(context).homeView(),
-                        icon: Icon(Icons.menu),
+                        icon: const Icon(Icons.menu),
                       ),
                     ],
                   ),

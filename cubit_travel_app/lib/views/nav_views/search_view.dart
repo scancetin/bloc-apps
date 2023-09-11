@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
@@ -7,8 +5,6 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Search View"),
-    );
+    return const Text("Search View");
   }
 }

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:cubit_travel_app/cubit/app_cubits_cubit.dart';
 import 'package:cubit_travel_app/views/detail_view.dart';
 import 'package:cubit_travel_app/views/nav_views/home_view.dart';
@@ -15,15 +13,15 @@ class AppCubitsLogics extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<AppCubits, AppCubitsState>(builder: (context, state) {
         if (state is WelcomeState) {
-          return WelcomeView();
+          return const WelcomeView();
         } else if (state is LoadedState) {
-          return HomeView();
+          return const HomeView();
         } else if (state is LoadingState) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         } else if (state is DetailState) {
-          return DetailView();
+          return const DetailView();
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       }),
     );

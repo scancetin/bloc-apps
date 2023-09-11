@@ -1,11 +1,8 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:cubit_travel_app/widgets/custom_large_text.dart';
 import 'package:cubit_travel_app/widgets/custom_text.dart';
 import 'package:cubit_travel_app/widgets/welcome_view/responsive_button.dart';
 import 'package:flutter/material.dart';
 import 'package:lorem_ipsum/lorem_ipsum.dart';
-
 import '../widgets/welcome_view/page_view_dots_widget.dart';
 
 class WelcomeView extends StatelessWidget {

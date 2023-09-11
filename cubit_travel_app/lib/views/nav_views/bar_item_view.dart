@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
-
 import 'package:flutter/material.dart';
 
 class BarItemView extends StatelessWidget {
@@ -7,8 +5,6 @@ class BarItemView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Bar Item View"),
-    );
+    return const Text("Bar Item View");
   }
 }
