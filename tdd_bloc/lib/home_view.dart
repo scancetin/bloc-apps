@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -10,7 +12,11 @@ class HomeView extends StatelessWidget {
         title: const Text('Material App Bar'),
       ),
       body: Center(
-        child: Container(width: 50, height: 50, color: Colors.red),
+        child: Container(
+          width: 50,
+          height: 50,
+          color: Colors.red,
+        ),
       ),
     );
   }
