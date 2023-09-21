@@ -2,6 +2,8 @@ import 'package:clean_arch_news_app/features/daily_news/presentation/bloc/articl
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../widgets/custom_list_tile.dart';
+
 class DailyNews extends StatelessWidget {
   const DailyNews({super.key});
 
@@ -36,9 +38,7 @@ class DailyNews extends StatelessWidget {
           return ListView.builder(
             itemCount: state.articles!.length,
             itemBuilder: ((context, index) {
-              return ListTile(
-                title: Text(index.toString()),
-              );
+              return CustomListTile(index: index);
             }),
           );
         } else {
